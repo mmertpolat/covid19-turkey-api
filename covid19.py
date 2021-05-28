@@ -45,5 +45,10 @@ data['rapor'].append({
 with open('covid19.txt', 'a') as outfile:
     json.dump(data, outfile)
 
+if os.path.exists("covid19.txt"):
+  os.remove("covid19.txt")
+else:
+  print("covid19.txt bulunamadi")
+
 tarayici.close()
 print("success")
