@@ -42,9 +42,8 @@ data['rapor'].append({
 	'toplamiyilesen': toplamiyilesen
 })
 
-f_w = open("covid19.txt", "w")
-f_w.write(str(data))
-f_w.close()
+with open('covid19.txt', 'w') as outfile:
+    json.dump(data, outfile)
 
 tarayici.close()
-print("success")
+print("basarili")
