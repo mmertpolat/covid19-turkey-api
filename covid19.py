@@ -3,7 +3,10 @@ from selenium.webdriver.chrome.options import Options
 import time
 import json
 
-chromedriver = "chromedriver" # change with your chromedriver url
+chrome_options = Options()
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--disable-dev-shm-usage')
 tarayici = webdriver.Chrome('chromedriver',chrome_options=chrome_options)
 tarayici.get("https://covid19.saglik.gov.tr/")
 time.sleep(1)
