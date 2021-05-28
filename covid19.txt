@@ -1,0 +1,1 @@
+{"rapor": [{"tarih": "22 MAYIS 2021", "buguntest": "216.658", "bugunvaka": "8.697", "bugunhasta": "835", "bugunvefat": "231", "buguniyilesen": "14.472", "toplamtest": "52.167.387", "toplamvaka": "5.178.648", "toplamvefat": "46.071", "toplamagirhasta": "1.876", "toplamiyilesen": "5.013.111"}]}
