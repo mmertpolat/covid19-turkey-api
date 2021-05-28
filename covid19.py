@@ -42,10 +42,6 @@ data['rapor'].append({
 	'toplamiyilesen': toplamiyilesen
 })
 
-os.remove("covid19.txt")
-
-dosyaac = open("covid19.txt", "a")
-
 with open('covid19.txt', 'a') as outfile:
     json.dump(data, outfile)
 
