@@ -4,6 +4,8 @@
 name: Covid19 Api Service
 
 on:
+  schedule:
+    - cron: "*/5 * * * *"
   push:
     branches: [ main ]
   pull_request:
