@@ -2,7 +2,7 @@ from selenium import webdriver
 import time
 import json
 
-chromedriver = "E:/chromedriver" # change with your chromedriver url
+chromedriver = "chromedriver" # change with your chromedriver url
 tarayici = webdriver.Chrome(chromedriver)
 tarayici.get("https://covid19.saglik.gov.tr/")
 time.sleep(1)
