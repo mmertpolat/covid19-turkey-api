@@ -42,7 +42,7 @@ data['rapor'].append({
 	'toplamiyilesen': toplamiyilesen
 })
 
-with open('covid19.txt', 'a') as outfile:
+with open('covid19.txt', 'w') as outfile:
     json.dump(data, outfile)
 
 tarayici.close()
