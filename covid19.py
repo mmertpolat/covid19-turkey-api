@@ -43,7 +43,7 @@ data['rapor'].append({
 })
 
 f_w = open("covid19.txt", "w")
-f_w.write(data)
+f_w.write(str(data))
 f_w.close()
 
 tarayici.close()
