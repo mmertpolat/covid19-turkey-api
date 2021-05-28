@@ -1,9 +1,10 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 import time
 import json
 
 chromedriver = "chromedriver" # change with your chromedriver url
-tarayici = webdriver.Chrome(chromedriver)
+tarayici = webdriver.Chrome('chromedriver',chrome_options=chrome_options)
 tarayici.get("https://covid19.saglik.gov.tr/")
 time.sleep(1)
 tarayici.maximize_window()
