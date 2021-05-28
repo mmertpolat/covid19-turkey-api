@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
+import os
 import json
 
 chrome_options = Options()
@@ -40,6 +41,10 @@ data['rapor'].append({
 	'toplamagirhasta': toplamagirhasta,
 	'toplamiyilesen': toplamiyilesen
 })
+
+os.remove("covid19.txt")
+
+dosyaac = open("covid19.txt", "w")
 
 with open('covid19.txt', 'w') as outfile:
     json.dump(data, outfile)
