@@ -45,3 +45,4 @@ with open('covid19.txt', 'w') as outfile:
     json.dump(data, outfile)
 
 tarayici.close()
+print("success")
