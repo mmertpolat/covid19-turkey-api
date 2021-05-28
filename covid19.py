@@ -44,9 +44,9 @@ data['rapor'].append({
 
 os.remove("covid19.txt")
 
-dosyaac = open("covid19.txt", "w")
+dosyaac = open("covid19.txt", "a")
 
-with open('covid19.txt', 'w') as outfile:
+with open('covid19.txt', 'a') as outfile:
     json.dump(data, outfile)
 
 tarayici.close()
