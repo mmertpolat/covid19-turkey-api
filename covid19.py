@@ -7,7 +7,7 @@ chrome_options = Options()
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
-tarayici = webdriver.Chrome('chromedriver',options=chrome_options)
+tarayici = webdriver.Chrome('chromedriver', options=chrome_options)
 tarayici.get("https://covid19.saglik.gov.tr/")
 time.sleep(1)
 tarayici.maximize_window()
@@ -28,20 +28,19 @@ print(tarih + "\n" + buguntest + "\n" + bugunvaka + "\n" + bugunhasta + "\n" + b
 data = {}
 data['rapor'] = []
 data['rapor'].append({
-	'tarih': tarih,
-    	'buguntest': buguntest,
-   	'bugunvaka': bugunvaka,
-        'bugunhasta': bugunhasta,
-	'bugunvefat': bugunvefat,
-	'buguniyilesen': buguniyilesen,
-	'toplamtest': toplamtest,
-	'toplamvaka': toplamvaka,
-	'toplamvefat': toplamvefat,
-	'toplamagirhasta': toplamagirhasta,
-	'toplamiyilesen': toplamiyilesen
+    'tarih': tarih,
+    'buguntest': buguntest,
+    'bugunvaka': bugunvaka,
+    'bugunhasta': bugunhasta,
+    'bugunvefat': bugunvefat,
+    'buguniyilesen': buguniyilesen,
+    'toplamtest': toplamtest,
+    'toplamvaka': toplamvaka,
+    'toplamvefat': toplamvefat,
+    'toplamagirhasta': toplamagirhasta,
+    'toplamiyilesen': toplamiyilesen
 })
 
 with open('dataset/daily.txt', 'w') as outfile:
     json.dump(data, outfile)
-	
 tarayici.close()
