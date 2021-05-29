@@ -48,7 +48,7 @@ with open('dataset/daily.txt', 'w') as outfile:
     json.dump(data, outfile)
 t.close()
 
-telesecret = os.environ.get("TELEGRAM_SECRET")
+telesecret = os.covid.get("TELEGRAM_SECRET")
 
 tb = telebot.TeleBot("'"+telesecret+"'", parse_mode=None)
 tb.send_message("-1001328897673", rapor)
