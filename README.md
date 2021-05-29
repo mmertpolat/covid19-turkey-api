@@ -1,4 +1,3 @@
-# Covid-19 Api Service for Turkey
-It gives many daily coronavirus data for Turkey as json output.
+# Covid-19 Api Service for Turkey ![Python](https://github.com/mmertpolat/covid19-turkey-api/actions/workflows/covid19.yml/badge.svg)
 
-![Python](https://github.com/mmertpolat/covid19-turkey-api/actions/workflows/covid19.yml/badge.svg)
+It gives many daily coronavirus data for Turkey as json output.
