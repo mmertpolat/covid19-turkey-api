@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
 import json
+import telebot
 
 chrome_options = Options()
 chrome_options.add_argument('--headless')
@@ -44,3 +45,6 @@ data['rapor'].append({
 with open('dataset/daily.txt', 'w') as outfile:
     json.dump(data, outfile)
 t.close()
+
+tb = telebot.TeleBot("1809107912:AAEQwmZ3hYIQPmx7df_gnaeJWxXjmXGH3Dg", parse_mode=None)
+tb.send_message("1211133408", tarih)
