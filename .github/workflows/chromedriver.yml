@@ -39,3 +39,4 @@ jobs:
       env:
         TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         CHAT_ID: ${{ secrets.CHAT_ID }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
