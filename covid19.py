@@ -24,7 +24,8 @@ toplamvefat = t.find_element_by_css_selector("section#vaka_sayilari_home div:nth
 toplamagirhasta = t.find_element_by_css_selector("section#vaka_sayilari_home div:nth-child(4) > div:nth-child(5) > div > p").text
 toplamiyilesen = t.find_element_by_css_selector("section#vaka_sayilari_home div:nth-child(4) > div:nth-child(6) > div > p").text
 
-print("Tarih: " + tarih + "\n" + "Bugün Yapılan Test: " + buguntest + "\n" + "Bugün Vaka: " + bugunvaka + "\n" + "Bugün Hasta: " + bugunhasta + "\n" + "Bugün Vefat: " + bugunvefat + "\n" + "Bugün İyileşen: " + buguniyilesen + "\n" + "Toplam Test: " + toplamtest + "\n" + "Toplam Vaka: " + toplamvaka + "\n" + "Toplam Vefat: " + toplamvefat + "\n" + "Toplam Ağır Hasta: " + toplamagirhasta + "\n" + "Toplam İyileşen: " + toplamiyilesen)
+rapor = "Tarih: " + tarih + "\n" + "Bugün Yapılan Test: " + buguntest + "\n" + "Bugün Vaka: " + bugunvaka + "\n" + "Bugün Hasta: " + bugunhasta + "\n" + "Bugün Vefat: " + bugunvefat + "\n" + "Bugün İyileşen: " + buguniyilesen + "\n" + "Toplam Test: " + toplamtest + "\n" + "Toplam Vaka: " + toplamvaka + "\n" + "Toplam Vefat: " + toplamvefat + "\n" + "Toplam Ağır Hasta: " + toplamagirhasta + "\n" + "Toplam İyileşen: " + toplamiyilesen
+print(rapor)
 
 data = {}
 data['rapor'] = []
@@ -47,4 +48,4 @@ with open('dataset/daily.txt', 'w') as outfile:
 t.close()
 
 tb = telebot.TeleBot("1809107912:AAEQwmZ3hYIQPmx7df_gnaeJWxXjmXGH3Dg", parse_mode=None)
-tb.send_message("-1001328897673", tarih)
+tb.send_message("-1001328897673", rapor)
