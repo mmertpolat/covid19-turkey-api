@@ -50,5 +50,5 @@ t.close()
 
 telesecret = os.environ.get("TELEGRAM_SECRET")
 
-tb = telebot.TeleBot(telesecret, parse_mode=None)
+tb = telebot.TeleBot("'"+telesecret+"'", parse_mode=None)
 tb.send_message("-1001328897673", rapor)
