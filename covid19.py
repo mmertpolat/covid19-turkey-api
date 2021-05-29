@@ -43,10 +43,7 @@ data['rapor'].append({
 	'toplamiyilesen': toplamiyilesen
 })
 
-try:
-    with open('dataset/daily.txt', 'w') as outfile:
-        json.dump(data, outfile)
-except Exception:
-    traceback.print_exc()
-
+with open('dataset/daily.txt', 'w') as outfile:
+    json.dump(data, outfile)
+	
 tarayici.close()
