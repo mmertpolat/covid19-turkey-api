@@ -42,8 +42,10 @@ data['rapor'].append({
 	'toplamiyilesen': toplamiyilesen
 })
 
+try:
 with open('dataset/daily.json', 'w') as outfile:
     json.dump(data, outfile)
+except:
+  print("Dosyaya yazilamadı")
 
 tarayici.close()
-print("basarili")
