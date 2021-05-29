@@ -45,7 +45,6 @@ data['rapor'].append({
 try:
     with open('dataset/daily.json', 'w') as outfile:
         json.dump(data, outfile)
-except 
-    Exception as e: print(e)
+except Exception as e: print(e)
 
 tarayici.close()
