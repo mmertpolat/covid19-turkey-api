@@ -42,7 +42,7 @@ data['rapor'].append({
 	'toplamiyilesen': toplamiyilesen
 })
 
-with open('dataset/daily.txt', 'w') as outfile:
+with open('dataset/daily.json', 'w') as outfile:
     json.dump(data, outfile)
 
 tarayici.close()
