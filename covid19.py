@@ -45,5 +45,7 @@ data['rapor'].append({
 with open('covid19.txt', 'w') as outfile:
     json.dump(data, outfile)
 
+f = open("test.txt", "x")
+
 tarayici.close()
 print("basarili")
