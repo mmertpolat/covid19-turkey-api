@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.options import Options
 import time
 import os
 import json
+import traceback
 
 chrome_options = Options()
 chrome_options.add_argument('--headless')
@@ -43,8 +44,9 @@ data['rapor'].append({
 })
 
 try:
-    with open('dataset/daily.json', 'w') as outfile:
+    with open('dataset/daily.txt', 'w') as outfile:
         json.dump(data, outfile)
-except Exception as e: print(e)
+except Exception:
+    traceback.print_exc()
 
 tarayici.close()
