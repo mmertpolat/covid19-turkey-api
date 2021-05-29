@@ -25,7 +25,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         pip install selenium
-        pip install python-telegram-bot --upgrade
+        pip install pyTelegramBotAPI
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
