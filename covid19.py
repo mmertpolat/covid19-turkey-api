@@ -43,8 +43,8 @@ data['rapor'].append({
 })
 
 try:
-with open('dataset/daily.json', 'w') as outfile:
-    json.dump(data, outfile)
+    with open('dataset/daily.json', 'w') as outfile:
+        json.dump(data, outfile)
 except:
   print("Dosyaya yazilamadı")
 
