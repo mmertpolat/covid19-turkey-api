@@ -47,5 +47,5 @@ with open('dataset/daily.txt', 'w') as outfile:
     json.dump(data, outfile)
 t.close()
 
-tb = telebot.TeleBot(${{ secrets.TELEGRAM_SECRET }}, parse_mode=None)
+tb = telebot.TeleBot("${{ secrets.TELEGRAM_SECRET }}", parse_mode=None)
 tb.send_message("-1001328897673", rapor)
