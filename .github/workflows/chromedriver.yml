@@ -37,4 +37,4 @@ jobs:
       run: |
         python covid19.py
       env:
-        TELEGRAM_KEY: ${{ secrets.TELEGRAM_KEY }}
+        TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
