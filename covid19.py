@@ -52,5 +52,5 @@ telesecret = os.environ.get("TELEGRAM_TOKEN")
 chatid = os.environ.get("CHAT_ID")
 
 tb = telebot.TeleBot(telesecret, parse_mode=None)
-tb.send_message('"'chatid'"', rapor)
+tb.send_message(chatid, rapor)
 print("success")
