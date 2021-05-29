@@ -1,9 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
-import os
 import json
-import traceback
 
 chrome_options = Options()
 chrome_options.add_argument('--headless')
@@ -30,10 +28,10 @@ print(tarih + "\n" + buguntest + "\n" + bugunvaka + "\n" + bugunhasta + "\n" + b
 data = {}
 data['rapor'] = []
 data['rapor'].append({
-    'tarih': tarih,
-    'buguntest': buguntest,
-    'bugunvaka': bugunvaka,
-	'bugunhasta': bugunhasta,
+	'tarih': tarih,
+    	'buguntest': buguntest,
+   	'bugunvaka': bugunvaka,
+        'bugunhasta': bugunhasta,
 	'bugunvefat': bugunvefat,
 	'buguniyilesen': buguniyilesen,
 	'toplamtest': toplamtest,
