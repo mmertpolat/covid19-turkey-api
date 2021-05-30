@@ -2,7 +2,7 @@ name: Covid19 Rapor
 
 on:
   schedule:
-    - cron: '0 19 * * *'
+    - cron: '0 17 * * *'
   push:
     branches: [ main ]
   pull_request:
