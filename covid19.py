@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from datetime import date
 import time
 import os
 import json
@@ -13,19 +14,14 @@ t = webdriver.Chrome('chromedriver', options=chrome_options)
 t.get("https://covid19.saglik.gov.tr/")
 time.sleep(1)
 t.maximize_window()
-tarih = t.find_element_by_css_selector("section#vaka_sayilari_home h3").text
-buguntest = t.find_element_by_css_selector("section#vaka_sayilari_home div:nth-child(2) > div:nth-child(2) > div > p").text
-bugunvaka = t.find_element_by_css_selector("section#vaka_sayilari_home div:nth-child(2) > div:nth-child(3) > div > p").text
-bugunhasta = t.find_element_by_css_selector("section#vaka_sayilari_home div:nth-child(2) > div:nth-child(4) > div > p").text
-bugunvefat = t.find_element_by_css_selector("section#vaka_sayilari_home div:nth-child(2) > div:nth-child(5) > div > p").text
-buguniyilesen = t.find_element_by_css_selector("section#vaka_sayilari_home div:nth-child(2) > div:nth-child(6) > div > p").text
-toplamtest = t.find_element_by_css_selector("section#vaka_sayilari_home div:nth-child(4) > div:nth-child(2) > div > p").text
-toplamvaka = t.find_element_by_css_selector("section#vaka_sayilari_home div:nth-child(4) > div:nth-child(3) > div > p").text
-toplamvefat = t.find_element_by_css_selector("section#vaka_sayilari_home div:nth-child(4) > div:nth-child(4) > div > p").text
-toplamagirhasta = t.find_element_by_css_selector("section#vaka_sayilari_home div:nth-child(4) > div:nth-child(5) > div > p").text
-toplamiyilesen = t.find_element_by_css_selector("section#vaka_sayilari_home div:nth-child(4) > div:nth-child(6) > div > p").text
+today = date.today()
+tarih = today.strftime("%d/%m/%Y")
+buguntest = t.find_element_by_css_selector("section#post-data-harita div.vaka_box_1 > div > div.col-lg-8 > b").text
+bugunvaka = t.find_element_by_css_selector("section#post-data-harita div.vaka_box_2 > div > div.col-lg-8 > b").text
+bugunvefat = t.find_element_by_css_selector("section#post-data-harita div.vaka_box_3 > div > div.col-lg-8 > b").text
+buguniyilesen = t.find_element_by_css_selector("section#post-data-harita div.vaka_box_4 > div > div.col-lg-8 > b").text
 
-rapor = "Tarih: " + tarih + "\n" + "Bugün Yapılan Test: " + buguntest + "\n" + "Bugün Vaka: " + bugunvaka + "\n" + "Bugün Hasta: " + bugunhasta + "\n" + "Bugün Vefat: " + bugunvefat + "\n" + "Bugün İyileşen: " + buguniyilesen + "\n" + "Toplam Test: " + toplamtest + "\n" + "Toplam Vaka: " + toplamvaka + "\n" + "Toplam Vefat: " + toplamvefat + "\n" + "Toplam Ağır Hasta: " + toplamagirhasta + "\n" + "Toplam İyileşen: " + toplamiyilesen
+rapor = "Tarih: " + tarih + "\n" + "Bugün Yapılan Test: " + buguntest + "\n" + "Bugün Vaka: " + bugunvaka + "\n" + "Bugün Vefat: " + bugunvefat + "\n" + "Bugün İyileşen: " + buguniyilesen
 print(rapor)
 
 data = {}
@@ -34,14 +30,8 @@ data['rapor'].append({
     'tarih': tarih,
     'buguntest': buguntest,
     'bugunvaka': bugunvaka,
-    'bugunhasta': bugunhasta,
     'bugunvefat': bugunvefat,
-    'buguniyilesen': buguniyilesen,
-    'toplamtest': toplamtest,
-    'toplamvaka': toplamvaka,
-    'toplamvefat': toplamvefat,
-    'toplamagirhasta': toplamagirhasta,
-    'toplamiyilesen': toplamiyilesen
+    'buguniyilesen': buguniyilesen
 })
 
 with open('daily.json', 'w') as outfile:
