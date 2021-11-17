@@ -25,5 +25,4 @@ MIT
 
 ### Developer
 
-- Muhammet Mert POLAT
-- [mertpolat.com.tr]
+- [Muhammet Mert POLAT](https://mertpolat.com.tr)
