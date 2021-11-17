@@ -2,8 +2,8 @@
 
 It gives many daily coronavirus data for Turkey as json output. Data source is: https://covid19.saglik.gov.tr
 
-Join Telegram Channel: https://t.me/Covid19Gunlugu
-API Json Output: https://raw.githubusercontent.com/mmertpolat/covid19-turkey-api/main/daily.json
+- Join Telegram Channel: https://t.me/Covid19Gunlugu
+- API Json Output: https://raw.githubusercontent.com/mmertpolat/covid19-turkey-api/main/daily.json
 
 If you want to present the information on a daily basis, you can use the output in the link above.
 
